@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress Bar</title>
+
+    <style>
+
+        *,:before,:after{
+            box-sizing: border-box;
+        }
+
+        html{
+            height:100%; 
+        }
+
+        body{
+            width: 600px; 
+            margin:0 auto; 
+            font-family: 'Poiret One', cursive; 
+            height:100%;
+        }
+
+        .example-1{
+            position: relative;
+            height: 200px;
+            margin: 1em 0;
+        }
+
+        .example-1:before{
+            content:'';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 999;
+            width: 300px;
+            border-radius: 10px;
+            border: solid 6px #009DFF;
+            transform: translate(-50%, -50%);
+        }
+
+        .file {
+            content:'';
+            position: absolute;
+            top: 31%;
+            left: 50%;
+            width: 35px;
+            height: 40px;
+            z-index: 999;
+            background: #09D5D9;
+            animation-name: example-1;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;    
+            animation-iteration-count: infinite;
+        }
+
+        .filetip {
+            width: 35px;
+            height: 40px;
+            z-index: 999;
+            background: #09D5D9;
+        }
+
+        @keyframes example-1 {
+            0% { transform: translate(-130px,-7.5px); }
+            100% { transform: translate(100px,-7.5px); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="example-1">
+        <div class="file">
+            <div class="filetip"></div>
+        </div>
+    </div>
+</body>
+</html>
