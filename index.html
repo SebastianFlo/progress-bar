@@ -32,47 +32,57 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            z-index: 999;
+            z-index: 0;
             width: 300px;
             border-radius: 10px;
-            border: solid 6px #009DFF;
+            border: solid 2px #09D5D9;
             transform: translate(-50%, -50%);
         }
 
         .file {
             content:'';
             position: absolute;
-            top: 31%;
-            left: 50%;
-            width: 35px;
-            height: 40px;
-            z-index: 999;
-            background: #09D5D9;
-            animation-name: example-1;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;    
-            animation-iteration-count: infinite;
+            top: 25%;
+            left: 23%;
+            width: 32px;
+            height: 32px;
+            z-index: 1;
+            background: #009DFF;
+            -webkit-transition: left 1s;
         }
 
-        .filetip {
-            width: 35px;
-            height: 40px;
-            z-index: 999;
-            background: #09D5D9;
+        .file-image {
+            z-index: 2;
+            background: url(file.png);
+            background-size: cover;
+            width: 32px;
+            height: 32px;
+            background-position: 6px;
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
         }
 
-        @keyframes example-1 {
-            0% { transform: translate(-130px,-7.5px); }
-            100% { transform: translate(100px,-7.5px); }
+        .file-tip {
+            width: 0; 
+            height: 0; 
+            top: 101%;
+            position: absolute;
+            border-left: 16px solid transparent;
+            border-right: 16px solid transparent;
+            border-top: 16px solid #009DFF;
         }
 
     </style>
+
 </head>
 <body>
     <div class="example-1">
         <div class="file">
-            <div class="filetip"></div>
+            <div class="file-image"></div>
+            <div class="file-tip"></div>
         </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
